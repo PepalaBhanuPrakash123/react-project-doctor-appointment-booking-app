@@ -6,7 +6,7 @@ import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 
 import { auth } from "../../firebase.config";
 import "./Login.css"; // Importing the CSS file
 import { Stethoscope } from 'lucide-react';
-import ForgotPassword from "./forgotpassword";
+import ForgotPassword from "./ForgotPassword";
 
 const Login = () => {
   const [email, setEmail] = useState("");
