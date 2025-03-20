@@ -1,0 +1,71 @@
+/* Fullscreen Background Styling */
+.login-container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../assets/240_F_1028421596_BsCLIQ9U4L5dHuESrAniJzV2bvo4nKgo.jpg") 
+    no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* Glassmorphism Card with White Background */
+.glass-card {
+    width: 400px;
+    max-width: 90%;
+    background: white !important; /* Ensures white background */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Form Input Fields */
+.form-control {
+    /* background: white; */
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid black; /* Black border */
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-control::placeholder {
+    color: rgba(0, 0, 0, 0.5); /* Lighter black placeholder */
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Buttons */
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Google Button */
+.btn-danger {
+    background-color: #db4437;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c1351d;
+}
+
+/* Text Styles */
+.text-dark {
+    color: black !important;
+    text-decoration: none;
+}
+

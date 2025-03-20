@@ -1,0 +1,75 @@
+/* Fullscreen Background Styling */
+.signup-container {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../assets/240_F_505106152_xWHMoW0DmIxVHuczIQZeATHfYj3rPghd.jpg") 
+    no-repeat center center;
+    background-size: cover; /* Maintains aspect ratio and fills the screen */
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* Glassmorphism Card Effect */
+.glassmorphism-card {
+    width: 400px;
+    max-width: 90%; /* Responsive */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px); /* Stronger blur effect */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: black;
+}
+
+
+/* Form Input Fields */
+.form-control {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px; 
+    color: black;
+}
+
+.form-control::placeholder {
+    color: black;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Buttons */
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Google Button */
+.btn-danger {
+    background-color: #db4437;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c1351d;
+}
+
+/* Text Styles */
+.text-white {
+    color: black !important;
+}
+
+ 
