@@ -79,9 +79,10 @@ const About = () => {
                             </div>
 
                         </div>
-                        <a href='#appointment' className='btn btn-primary px-4 py-2 rounded-pill text-white fs-5 mt-3'>
+                        <a href='#appointment' className='font-bold btn btn-primary px-5 py-3 rounded-pill text-white fs-4 mt-3'>
                             Book Appointment
                         </a>
+
                     </div>
                 </div>
 
@@ -98,7 +99,7 @@ const About = () => {
                             ].map((service, index) => (
                                 <div key={index} className="col-md-4">
                                     <div className="p-4 rounded shadow text-center d-flex flex-column align-items-center"
-                                        style={{ backgroundColor: "#f0f0f0", minHeight: "220px" }}>
+                                        style={{ background: "linear-gradient(180deg, rgba(184, 218, 228, 0.16),  rgba(184, 218, 228, 0.4))", minHeight: "220px" }}>
                                         <div className="mb-3">{service.img}</div>
                                         <h3 className="h5 fw-bold text-dark mb-2">{service.title}</h3>
                                         <p className="text-dark">{service.desc}</p>
@@ -149,7 +150,7 @@ const About = () => {
                         <div key={index} className="col-md-4 mb-4 d-flex">
                             <div
                                 className="rounded shadow overflow-hidden hover-shadow-lg transition-shadow w-100 d-flex flex-column"
-                                style={{ backgroundColor: "#f0f0f0" }}
+                                style={{ background: "linear-gradient(180deg, rgba(184, 218, 228, 0.16), rgba(161, 233, 255, 0.4))" }}
                             >
                                 <img src={place.image} alt={place.title} className="w-100" style={{ height: "12rem", objectFit: "cover" }} />
                                 <div className="p-3 flex-grow-1 d-flex flex-column">
@@ -179,7 +180,7 @@ const Testimonials = () => {
                             className="p-4 rounded shadow text-dark text-center border border-dark d-flex flex-column justify-content-between h-100"
                             style={{
                                 minHeight: "280px", // Ensures equal height
-                                backgroundColor: "rgba(232, 233, 235, 0.8)",
+                                background: "linear-gradient(180deg, rgba(184, 218, 228, 0.16), rgba(184, 218, 228, 0.4))",
                                 fontStyle: "italic",
                                 transition: "transform 0.3s ease-in-out",
                                 borderRadius: "12px",

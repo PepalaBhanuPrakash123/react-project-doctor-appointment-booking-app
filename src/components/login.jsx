@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import toastify CSS
 import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../../firebase.config";
 import "./Login.css"; // Importing the CSS file
 import { Stethoscope } from 'lucide-react';
-import ForgotPassword from "./ForgotPassword";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -38,12 +38,14 @@ const Login = () => {
       toast.success("Logged in with Google!");
       navigate("/home");
     } catch (error) {
+      console.error("Google Login Error:", error);
       toast.error(error.message);
     }
   }
 
   return (
     <div className="login-container">
+      <ToastContainer position="top-right" autoClose={3000} />
       <div className="glass-card">
         <a href="#" className='flex justify-center items-center text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent hover:text-[#00bfff] bg-clip-text' style={{ textDecoration: "none" }}>
           <Stethoscope className='text-[#004080] mr-2 size={32}' />
@@ -83,7 +85,6 @@ const Login = () => {
                 Forgot Password?
               </Link>
             </p>
-
           </div>
 
           {/* Terms & Conditions Checkbox */}
@@ -122,3 +123,4 @@ const Login = () => {
 };
 
 export default Login;
+
