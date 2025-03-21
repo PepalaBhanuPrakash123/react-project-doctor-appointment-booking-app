@@ -75,11 +75,11 @@ const Contact = () => {
 
                         {/* Contact Info */}
                         <div className="col-md-6">
-                            <div className=" rounded shadow p-4 h-100 d-flex flex-column" style={{backgroundColor:"#FAFAFA"}}>
+                            <div className=" rounded shadow p-4 h-100 d-flex flex-column" style={{ backgroundColor: "#FAFAFA" }}>
                                 <h2 className="text-primary fw-bold mb-4">Hospital Information</h2>
                                 <div className="mb-3 d-flex align-items-center">
                                     <MapPin className="text-dark me-2" size={32} />
-                                    <p className="text-dark mb-0">Jubilee Hills, Hyderabad</p>
+                                    <p className="text-dark mb-0">Greams Lane, Chennai - 600006</p>
                                 </div>
                                 <div className="mb-3 d-flex align-items-center">
                                     <Phone className="text-dark me-2" size={32} />
@@ -89,17 +89,19 @@ const Contact = () => {
                                     <Mail className="text-dark me-2" size={32} />
                                     <p className="text-dark mb-0">contact@newlifehealthcare.com</p>
                                 </div>
-                                <div className="flex-grow-1 d-flex justify-content-center align-items-center rounded overflow-hidden" style={{ minHeight: '400px' }}>
+                                <div className="d-flex justify-content-center align-items-center rounded overflow-hidden" style={{ minHeight: '400px', width: '100%' }}>
                                     <iframe
-                                        title="Google Maps Location"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15230.867346364834!2d78.3937083!3d17.4153318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976634652a37%3A0xeb778fba80ddd5bf!2sApollo%20Hospitals%20Jubilee%20Hills%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1708439000000"
+                                        title="Apollo Hospital Chennai Location"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.2265016017386!2d80.2134287!3d13.0631824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52666accdfbb59%3A0x2e0d1b10a5e06d2f!2sApollo%20Hospital%20Greams%20Lane%20Chennai!5e0!3m2!1sen!2sin!4v1711050912395"
                                         width="100%"
-                                        height="100%"
+                                        height="400px"
                                         style={{ border: 0 }}
-                                        allowFullScreen=""
-                                        loading="lazy">
+                                        allowFullScreen
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade">
                                     </iframe>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -107,7 +109,7 @@ const Contact = () => {
             </section>
 
             {/* Footer Section */}
-            <footer className="py-5 border-top" style={{ backgroundColor: "#f0f0f0" }}>
+            <footer className="py-5 border-top" style={{ background: "linear-gradient(180deg, rgba(184, 218, 228, 0.16), rgba(184, 218, 228, 0.4))" }}>
                 <div className="container">
                     <div className="row justify-content-between">
                         {/* Brand Name */}
@@ -180,29 +182,28 @@ const Contact = () => {
                 </div>
 
                 {/* Copyright & Policies */}
-                {/* Copyright & Policies */}
-<div className="text-center text-muted py-3 border-top">
-    <div className="d-flex justify-content-center align-items-center flex-wrap gap-4">
-        <p className="mb-0 small">&copy; 2025 New Life Healthcare</p>
-        <a href="#" className="text-muted small text-decoration-none">Terms</a>
-        <a href="#" className="text-muted small text-decoration-none">Privacy</a>
-        <a href="#" className="text-muted small text-decoration-none">Sitemap</a>
-        <div className="d-flex gap-3">
-            <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
-                <img src="https://images.freeimages.com/image/large-previews/b2e/x-twitter-black-isolated-logo-5694253.png" 
-                     alt="Twitter" width="30" height="30" />
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/018/930/460/small/instagram-logo-instagram-icon-transparent-free-png.png" 
-                     alt="Instagram" width="30" height="30" />
-            </a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/053/408/038/small/facebook-icon-with-round-line-and-transparent-background-free-png.png" 
-                     alt="Facebook" width="30" height="30" />
-            </a>
-        </div>
-    </div>
-</div>
+                <div className="text-center text-muted py-3 border-top"  style={{ background: " rgba(128, 224, 254, 0.16)", marginBottom:"-50px"}}>
+                    <div className="d-flex justify-content-center align-items-center flex-wrap gap-4">
+                        <p className="mb-0 small">&copy; 2025 New Life Healthcare</p>
+                        <a href="#" className="text-muted small text-decoration-none">Terms</a>
+                        <a href="#" className="text-muted small text-decoration-none">Privacy</a>
+                        <a href="#" className="text-muted small text-decoration-none">Sitemap</a>
+                        <div className="d-flex gap-3">
+                            <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="https://images.freeimages.com/image/large-previews/b2e/x-twitter-black-isolated-logo-5694253.png"
+                                    alt="Twitter" width="30" height="30" />
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/018/930/460/small/instagram-logo-instagram-icon-transparent-free-png.png"
+                                    alt="Instagram" width="30" height="30" />
+                            </a>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/053/408/038/small/facebook-icon-with-round-line-and-transparent-background-free-png.png"
+                                    alt="Facebook" width="30" height="30" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
 
             </footer>

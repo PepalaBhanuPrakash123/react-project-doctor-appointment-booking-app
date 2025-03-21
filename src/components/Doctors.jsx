@@ -53,14 +53,14 @@ const Doctors = () => {
                 <div className="row g-4">
                     {doctorsList.map((doctor, index) => (
                         <div key={index} className="col-md-4" >
-                            <div className="card shadow-sm text-center p-3" style={{ backgroundColor: "#f0f0f0" }}>
+                            <div className="card shadow-sm text-center p-3"  style={{ background: "linear-gradient(180deg, rgba(149, 181, 190, 0.16), rgba(160, 214, 230, 0.4))" }}>
                                 <img 
                                     src={doctor.image} 
                                     alt={doctor.name} 
                                     className="card-img-top rounded" 
                                     style={{ height: '220px', objectFit: 'cover' }}
                                 />
-                                <div className="card-body" style={{ backgroundColor: "#f0f0f0" }}>
+                                <div className="card-body">
                                     <h5 className="card-title fw-semibold">{doctor.name}</h5>
                                     <p className="text-muted mb-1">{doctor.specialization}</p>
                                     <p className="text-secondary mb-1">Experience: {doctor.experience}</p>
