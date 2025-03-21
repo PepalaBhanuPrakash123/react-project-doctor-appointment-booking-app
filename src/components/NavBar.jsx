@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Stethoscope } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { navigation } from '../constants';
-import '../index.css'
+import '../index.css';
 
 const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -33,15 +33,13 @@ const NavBar = () => {
     return (
         <nav className={`sticky-top navbar navbar-expand-lg ${scrolled ? 'shadow-sm' : ''}`}
             style={{
-                background: 'rgba(255, 255, 255, 0.2)',  // Glass effect transparency
-                backdropFilter: 'blur(10px)',           // Frosted glass blur
-                WebkitBackdropFilter: 'blur(10px)',     // Safari support
+                background: 'rgba(255, 255, 255, 0.2)',
+                backdropFilter: 'blur(10px)',
+                WebkitBackdropFilter: 'blur(10px)',
                 transition: 'all 0.3s ease-in-out'
             }}
             role="navigation">
-
             <div className='container'>
-
                 {/* Logo */}
                 <a href="#" className='navbar-brand d-flex align-items-center text-decoration-none'>
                     <Stethoscope className='text-primary me-2' size={32} />
@@ -64,20 +62,18 @@ const NavBar = () => {
                             </li>
                         ))}
                     </ul>
-
-                    {/* Login & Signup Buttons */}
-                    <div className="d-flex gap-2 ms-lg-3">
+                    
+                    {/* Login & Signup Buttons for Mobile */}
+                    <div className={`d-flex gap-2 ms-lg-3 ${menuOpen ? 'd-flex flex-column mt-2' : 'd-none d-lg-flex'}`}>
                         <a href="/login" className="btn btn-primary text-white custom-hover-login">Login</a>
                         <a href="/signup" className="btn btn-success text-white custom-hover-signup">Signup</a>
                     </div>
-
-
                 </div>
-
             </div>
         </nav>
     );
 };
 
 export default NavBar;
+
 
