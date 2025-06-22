@@ -96,7 +96,7 @@ const Appointment = () => {
                 <option>Dr. Pryashini - Gynecologist</option>
                 <option>Dr. Tarak - Orthopedic Surgeon</option>
                 <option>Dr. Niharika - Dermatologist</option>
-                <option>Dr. Anjali - Pediatrician</option>
+                <option>Dr. Maneesha - Pediatrician</option>
               </select>
             </div>
             <div className="mb-3">
