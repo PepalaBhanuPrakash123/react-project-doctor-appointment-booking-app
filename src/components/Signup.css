@@ -71,5 +71,8 @@
 .text-white {
     color: black !important;
 }
+.always-white-text {
+    color: white !important;
+}
 
  

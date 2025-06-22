@@ -103,7 +103,7 @@ const Signup = () => {
 
         <div className="text-center mt-3">
           <p className="text-white">OR</p>
-          <button className="btn btn-danger w-100" onClick={SignInWithGoogle}>
+          <button className="btn btn-danger w-100" onClick={SignInWithGoogle} disabled={!agreeTerms}>
             <i className="fab fa-google me-2"></i> Signup with Google
           </button>
         </div>

@@ -87,21 +87,7 @@ const Login = () => {
             </p>
           </div>
 
-          {/* Terms & Conditions Checkbox */}
-          <div className="mb-3 form-check">
-            <input
-              type="checkbox"
-              className="form-check-input"
-              id="termsCheck"
-              checked={agree}
-              onChange={() => setAgree(!agree)}
-            />
-            <label className="form-check-label" htmlFor="termsCheck">
-              I agree to the <Link to="/terms" className="text-primary" style={{ textDecoration: "none" }}>Terms & Conditions</Link>
-            </label>
-          </div>
-
-          <button type="submit" className="btn btn-success w-100" disabled={!agree}>
+          <button type="submit" className="btn btn-success w-100" >
             Login
           </button>
         </form>
@@ -109,7 +95,7 @@ const Login = () => {
         {/* Google Login Button */}
         <div className="text-center mt-3">
           <p>OR</p>
-          <button className="btn btn-danger w-100" onClick={handleGoogleLogin}>
+          <button className="btn btn-danger w-100" onClick={handleGoogleLogin} >
             <i className="fab fa-google me-2"></i> Login with Google
           </button>
         </div>

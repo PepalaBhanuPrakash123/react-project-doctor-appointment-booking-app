@@ -62,12 +62,13 @@ const NavBar = () => {
                             </li>
                         ))}
                     </ul>
-                    
+
                     {/* Login & Signup Buttons for Mobile - Fixed */}
                     <div className={`d-flex gap-2 ms-lg-3 ${menuOpen ? 'd-flex flex-column mt-2' : 'd-none d-lg-flex'}`}>
-                        <a href="/login" className="btn btn-primary text-white custom-hover-login" onClick={() => setMenuOpen(false)}>Log Out</a>
-                        <a href="/signup" className="btn btn-success text-white custom-hover-signup" onClick={() => setMenuOpen(false)}>Sign Out</a>
+                        <a href="/login" className="btn btn-primary always-white-text custom-hover-login fw-bold">Log Out</a>
+                        <a href="/signup" className="btn btn-success always-white-text custom-hover-signup fw-bold">Sign Out</a>
                     </div>
+
                 </div>
             </div>
         </nav>
