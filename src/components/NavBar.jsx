@@ -1,7 +1,7 @@
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Stethoscope } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { navigation } from '../constants';
 import '../index.css';
 
@@ -53,23 +53,44 @@ const NavBar = () => {
 
                 {/* Navbar Items */}
                 <div className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`}>
-                    <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
-                        {navigation.map((item) => (
-                            <li className='nav-item' key={item.id}>
-                                <a href={item.url} className='nav-link text-dark fw-semibold' onClick={(e) => handleNavClick(e, item.url)}>
-                                    {item.title}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
+  {/* Navigation Links */}
+  <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
+    {navigation.map((item) => (
+      <li className='nav-item' key={item.id}>
+        <a
+          href={item.url}
+          className='nav-link text-dark fw-semibold'
+          onClick={(e) => handleNavClick(e, item.url)}
+        >
+          {item.title}
+        </a>
+      </li>
+    ))}
+  </ul>
 
-                    {/* Login & Signup Buttons for Mobile - Fixed */}
-                    <div className={`d-flex gap-2 ms-lg-3 ${menuOpen ? 'd-flex flex-column mt-2' : 'd-none d-lg-flex'}`}>
-                        <a href="/login" className="btn btn-primary always-white-text custom-hover-login fw-bold">Log Out</a>
-                        <a href="/signup" className="btn btn-success always-white-text custom-hover-signup fw-bold">Sign Out</a>
-                    </div>
+  {/* Login & Signup Buttons */}
+  <div
+    className={`gap-2 ms-lg-3 ${
+      menuOpen ? 'd-flex flex-column mt-3' : 'd-none d-lg-flex'
+    }`}
+  >
+    <a
+      href="/login"
+      className="btn btn-primary fw-bold custom-hover-login .always-white-text"
+      onClick={() => setMenuOpen(false)}
+    >
+      Log Out
+    </a>
+    <a
+      href="/signup"
+      className="btn btn-success fw-bold custom-hover-signup .always-white-text"
+      onClick={() => setMenuOpen(false)}
+    >
+      Sign Out
+    </a>
+  </div>
+</div>
 
-                </div>
             </div>
         </nav>
     );

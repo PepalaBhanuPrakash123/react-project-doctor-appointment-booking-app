@@ -11,25 +11,20 @@ import { Stethoscope } from 'lucide-react';
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [agree, setAgree] = useState(false); // State for Terms & Conditions checkbox
   const navigate = useNavigate();
   const provider = new GoogleAuthProvider();
 
   async function login(e) {
-    e.preventDefault();
-    if (!agree) {
-      toast.error("You must agree to the Terms & Conditions!");
-      return;
-    }
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      toast.success("Login Successful!");
-      navigate("/home");
-    } catch (error) {
-      console.error("Login Error:", error);
-      toast.error(error.message);
-    }
+  e.preventDefault();
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    toast.success("Login Successful!");
+    navigate("/home");
+  } catch (error) {
+    console.error("Login Error:", error);
+    toast.error(error.message);
   }
+}
 
   // Google Login Function
   async function handleGoogleLogin() {
