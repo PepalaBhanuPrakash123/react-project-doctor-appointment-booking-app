@@ -124,3 +124,23 @@ button:focus-visible {
   background-color: #146c43 !important; /* Darker shade of Bootstrap success */
   color: white !important;
 }
+.testimonial-card {
+  min-height: 280px;
+  font-style: italic;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(184, 218, 228, 0.16), rgba(234, 234, 234, 1));
+  transition: transform 0.3s ease-in-out;
+}
+/* Testimonials carousel layout fix for <590px */
+@media (max-width: 590px) {
+  .carousel .carousel-item {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .carousel .carousel-item .p-4 {
+    padding: 1.5rem !important;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,170 @@
+/* Contact Section */
+#contact {
+  background: #f5f8fa;
+  min-height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/* Card styling for form and info */
+#contact .rounded.shadow {
+  background: #FAFAFA;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(20, 40, 90, 0.07);
+  padding: 32px;
+}
+
+/* Headings */
+#contact h2 {
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+#contact .form-label {
+  color: #222;
+  font-weight: 500;
+}
+
+/* Inputs and textarea */
+#contact .form-control {
+  border-radius: 6px;
+  border: 1px solid #e1e6ef;
+  background: #f9f9fb;
+  font-size: 1rem;
+  padding: 12px;
+  margin-top: 2px;
+  transition: border-color 0.2s;
+}
+#contact .form-control:focus {
+  border-color: #68c2e8;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.08);
+}
+
+/* Button */
+#contact button[type="submit"] {
+  background: #007bff;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  margin-top: 12px;
+  transition: background 0.18s;
+}
+#contact button[type="submit"]:hover {
+  background: #0056b3;
+}
+
+/* Hospital Info */
+#contact .text-primary {
+  color: #007bff !important;
+}
+
+#contact .mb-3.d-flex.align-items-center svg {
+  color: #007bff;
+}
+
+/* Map iframe container */
+#contact .overflow-hidden {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-top: 16px;
+  min-height: 340px;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(180deg, rgba(184, 218, 228, 0.16), rgba(184, 218, 228, 0.4));
+  border-top: 1px solid #e9eaef;
+  padding-top: 36px;
+  padding-bottom: 0;
+}
+footer .fw-bold {
+  color: #007bff;
+}
+footer .fw-semibold {
+  color: #222;
+}
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+footer ul li {
+  padding: 2px 0;
+  color: #555;
+  font-size: 1rem;
+}
+footer a {
+  color: #008fc6;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+footer a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Social icons */
+footer img[alt="Twitter"],
+footer img[alt="Instagram"],
+footer img[alt="Facebook"] {
+  border-radius: 8px;
+  background: #f2f6fa;
+  transition: box-shadow 0.18s;
+  box-shadow: 0 1px 4px #d2e3f3;
+}
+footer img[alt="Twitter"]:hover,
+footer img[alt="Instagram"]:hover,
+footer img[alt="Facebook"]:hover {
+  box-shadow: 0 2px 8px #8ecae6;
+}
+
+/* Copyright and policies */
+footer .text-muted {
+  color: #757580 !important;
+  font-size: 0.97rem;
+  background: rgba(128, 224, 254, 0.16);
+}
+footer .d-flex.gap-4,
+footer .d-flex.gap-3 {
+  gap: 1.2rem !important;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  #contact .container > .row > div {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 767px) {
+  #contact .rounded.shadow {
+    padding: 18px;
+  }
+  #contact .overflow-hidden {
+    min-height: 220px;
+  }
+  footer .row {
+    flex-direction: column;
+  }
+}
+@media (max-width: 575px) {
+  #contact {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  #contact .rounded.shadow {
+    padding: 10px;
+  }
+  #contact h2,
+  #contact .text-primary {
+    font-size: 1.3rem;
+  }
+  footer {
+    padding-top: 18px;
+  }
+}

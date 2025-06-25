@@ -25,7 +25,7 @@ const testimonials = [
         name: "Ram",
         location: "Mumbai",
         date: "Mar 2025",
-        text: "The care I received was exceptional. The doctors were thorough, and the staff was supportive and attentive. The hospital’s clean environment made my stay comfortable. Every procedure was handled professionally, and their kindness stood out. I truly appreciate the compassionate care and dedication to patient well-being."
+        text: "The care I received was exceptional. The doctors were thorough, and the staff was supportive and attentive. The hospital’s clean environment made my stay comfortable. Every procedure was handled professionally, and their kindness stood out"
     },
     {
         name: "Priya",
@@ -99,7 +99,7 @@ const About = () => {
                             ].map((service, index) => (
                                 <div key={index} className="col-md-4">
                                     <div className="p-4 rounded shadow text-center d-flex flex-column align-items-center"
-                                        style={{ background: "linear-gradient(180deg, rgba(184, 218, 228, 0.16),  rgba(184, 218, 228, 0.4))", minHeight: "220px" }}>
+                                        style={{ background: "linear-gradient(180deg, rgba(184, 218, 228, 0.16),  rgba(234, 234, 234, 1))", minHeight: "220px" }}>
                                         <div className="mb-3">{service.img}</div>
                                         <h3 className="h5 fw-bold text-dark mb-2">{service.title}</h3>
                                         <p className="text-dark">{service.desc}</p>
@@ -150,7 +150,7 @@ const About = () => {
                         <div key={index} className="col-md-4 mb-4 d-flex">
                             <div
                                 className="rounded shadow overflow-hidden hover-shadow-lg transition-shadow w-100 d-flex flex-column"
-                                style={{ background: "linear-gradient(180deg, rgba(184, 218, 228, 0.16), rgba(161, 233, 255, 0.4))" }}
+                                style={{ background: "linear-gradient(180deg, rgba(184, 218, 228, 0.16), rgba(234, 234, 234, 1))" }}
                             >
                                 <img src={place.image} alt={place.title} className="w-100" style={{ height: "12rem", objectFit: "cover" }} />
                                 <div className="p-3 flex-grow-1 d-flex flex-column">
@@ -169,42 +169,79 @@ const About = () => {
     );
 };
 
-const Testimonials = () => {
-    return (
-        <section className="container py-5">
-            <h1 className="text-center fw-bold mb-4 display-4">Patients Testimonials</h1>
-            <div className="row">
-                {testimonials.map((testimonial, index) => (
-                    <div key={index} className="col-md-4 mb-4">
-                        <div
-                            className="p-4 rounded shadow text-dark text-center border border-dark d-flex flex-column justify-content-between h-100"
-                            style={{
-                                minHeight: "280px", // Ensures equal height
-                                background: "linear-gradient(180deg, rgba(184, 218, 228, 0.16), rgba(184, 218, 228, 0.4))",
-                                fontStyle: "italic",
-                                transition: "transform 0.3s ease-in-out",
-                                borderRadius: "12px",
-                                borderWidth: "2px",
-                                borderStyle: "solid",
-                                borderColor: "black" // Dark color for the border
-                            }}
-                            onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-                            onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
-                        >
-                            <p className="flex-grow-1">"{testimonial.text}"</p>
-                            <div>
-                                <h5 className="fw-bold mt-3">{testimonial.name}</h5>
-                                <p className="mb-1">{testimonial.location}</p>
-                                <small>{testimonial.date}</small>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </section>
 
-    );
+
+import { useEffect } from "react";
+
+const chunkArray = (arr, size) => {
+  const chunked = [];
+  for (let i = 0; i < arr.length; i += size) {
+    chunked.push(arr.slice(i, i + size));
+  }
+  return chunked;
 };
+
+const Testimonials = () => {
+  useEffect(() => {
+    const carousel = document.querySelector("#carouselExampleSlidesOnly");
+    if (carousel) {
+      new window.bootstrap.Carousel(carousel, {
+        interval: 500, // fast scroll
+        ride: "carousel",
+        pause: false,
+        wrap: true,
+      });
+    }
+  }, []);
+
+  const testimonialChunks = chunkArray(testimonials, 2); // Split into 2-per-slide
+
+  return (
+    <section className="container py-5">
+      <h1 className="text-center fw-bold mb-4 display-4">Patients Testimonials</h1>
+
+      <div className="mx-auto" style={{ maxWidth: "1000px" }}>
+        <div id="carouselExampleSlidesOnly" className="carousel slide">
+          <div className="carousel-inner">
+            {testimonialChunks.map((chunk, index) => (
+              <div
+                key={index}
+                className={`carousel-item ${index === 0 ? "active" : ""}`}
+              >
+                <div className="row justify-content-center px-2">
+                  {chunk.map((testimonial, i) => (
+                    <div key={i} className="col-md-6 mb-3">
+                      <div
+                        className="p-4 text-dark text-center d-flex flex-column justify-content-between h-100 rounded"
+                        style={{
+                          minHeight: "280px",
+                          fontStyle: "italic",
+                          backgroundColor: "transparent",
+                          boxShadow: "none"
+                        }}
+                      >
+                        <p className="flex-grow-1">"{testimonial.text}"</p>
+                        <div>
+                          <h5 className="fw-bold mt-3">{testimonial.name}</h5>
+                          <p className="mb-1">{testimonial.location}</p>
+                          <small>{testimonial.date}</small>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+
+
 
 export default About;
 

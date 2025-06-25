@@ -1,0 +1,183 @@
+/* === Grid Layout Styles (used if Splide not applied) === */
+.specialists-carousel,
+.articles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.specialist-card,
+.article-card {
+  flex: 1 1 300px;           /* flexible width that wraps nicely */
+  max-width: 300px;          /* limits card width for centering */
+  min-width: 220px;
+  margin: 8px;               /* adds spacing between cards */
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .carousel-section {
+    padding: 40px 10px; /* was 20px */
+  }
+}
+
+/* Tablet: 2 Cards Per Row */
+/* Responsive adjustments for carousel section */
+@media (max-width: 1024px) {
+  .carousel-section {
+    max-width: 800px;
+    padding: 30px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-section {
+    max-width: 95%;
+    padding: 20px 12px;
+  }
+
+
+  .specialist-card,
+  .article-card {
+    flex: 0 0 90%;
+    max-width: 95%;
+    margin: 0 auto 10px;
+  }
+
+
+
+  .specialist-card-img,
+  .article-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* === Splide Carousel Section Styles === */
+.carousel-section {
+  padding: 40px 20px;
+  max-width: 1200px;  /* ✅ allows 3 full-width cards */
+  margin: 0 auto;
+}
+
+
+.carousel-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.carousel-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.specialist-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.specialist-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.specialist-card-body {
+  padding: 16px;
+}
+
+.specialist-title {
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+}
+
+.specialist-description {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Adjustments for Mobile inside Carousel */
+@media (max-width: 768px) {
+  .carousel-title {
+    font-size: 1.6rem;
+  }
+
+  .carousel-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .specialist-card-img {
+    height: 160px;
+  }
+}
+.splide__slide {
+  transition: transform 0.3s ease-in-out;
+}
+.carousel-section {
+  overflow-x: hidden;
+}
+
+@media (max-width: 486px) {
+  .carousel-section,
+  .articles-section,
+  .specialists-carousel {
+    padding: 10px 2vw !important;
+    max-width: 100vw !important;
+  }
+
+  .specialist-card,
+  .article-card {
+    min-width: 90vw !important;
+    max-width: 97vw !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
+    font-size: 0.98rem;
+  }
+
+  .specialist-card-img,
+  .article-card img {
+    height: 100px !important;
+    min-height: 80px !important;
+    max-height: 28vw !important;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .specialist-title,
+  .carousel-title,
+  .section-title {
+    font-size: 1.1rem !important;
+  }
+
+  .specialist-description,
+  .carousel-subtitle,
+  .section-subtitle {
+    font-size: 0.95rem !important;
+  }
+}
+.specialist-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.specialist-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 360px; /* ✅ forces consistent height across all cards */
+}
+
+.specialist-card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+

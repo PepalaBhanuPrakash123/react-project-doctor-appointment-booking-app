@@ -1,0 +1,172 @@
+.footer-app-download-section {
+  background: #fafafa;
+  padding: 48px 0 32px 0;
+  display: flex;
+  justify-content: center;
+}
+.footer-app-download-inner {
+  display: flex;
+  align-items: center;
+  max-width: 1050px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 56px;
+}
+.footer-app-download-visual {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-width: 240px;
+  position: relative;
+}
+.footer-app-download-phone {
+  position: relative;
+  width: 270px;
+  height: 370px;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Sticky effect for the video call image */
+.footer-app-download-phone-img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 2px 14px #b5b5b527;
+  border: 3px solid #000000;
+  z-index: 1;
+  /* Add the moving animation */
+  animation: float-move 4s ease-in-out infinite alternate;
+}
+
+/* Animation for gentle left-right & top-bottom floating effect */
+@keyframes float-move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(10px, -8px);
+  }
+  40% {
+    transform: translate(18px, 8px);
+  }
+  60% {
+    transform: translate(10px, 12px);
+  }
+  80% {
+    transform: translate(-10px, 8px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+
+/* Right content styles */
+.footer-app-download-content {
+  flex: 2 1 0;
+  min-width: 265px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-app-download-title {
+  font-size: 2.15rem;
+  font-weight: 700;
+  margin-bottom: 0.4em;
+  color: #393939;
+}
+.footer-app-download-desc {
+  font-size: 1.08rem;
+  color: #555;
+  margin-bottom: 1.2em;
+  line-height: 1.6;
+}
+.footer-app-download-stores {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 0.8em;
+}
+.footer-app-download-storebtn {
+  display: flex;
+  align-items: center;
+  background: #000000;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 22px 10px 14px;
+  text-decoration: none;
+  font-size: 1.07rem;
+  font-weight: 500;
+  transition: background 0.17s, color 0.17s;
+}
+
+.footer-app-download-storebtn:hover,
+.footer-app-download-storebtn:focus {
+  color: #fff;
+  background: #111111;
+}
+.footer-app-download-storebtn img {
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .footer-app-download-inner {
+    flex-direction: column;
+    gap: 36px;
+    align-items: center;
+    max-width: 97vw;
+  }
+  .footer-app-download-content {
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+  .footer-app-download-visual {
+    justify-content: flex-start;
+    margin-bottom: 18px;
+  }
+  .footer-app-download-phone {
+    position: relative !important;
+    top: unset !important;
+    left: unset !important;
+  }
+}
+@media (max-width: 600px) {
+  .footer-app-download-section {
+    padding: 28px 0 18px 0;
+  }
+  .footer-app-download-inner {
+    flex-direction: column;
+    gap: 18px;
+    max-width: 100vw;
+    padding: 0 3vw;
+  }
+  .footer-app-download-title {
+    font-size: 1.36rem;
+  }
+  .footer-app-download-phone {
+    width: 180px;
+    height: 230px;
+  }
+  .footer-app-download-stores {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .footer-app-download-storebtn {
+    padding: 8px 16px 8px 10px;
+    font-size: 0.96rem;
+  }
+  .footer-app-download-storebtn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+  }
+}

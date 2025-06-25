@@ -3,6 +3,7 @@ import Appointment from "./Appointment"
 import Contact from "./Contact"
 import Doctors from "./Doctors"
 import NavBar from "./NavBar"
+import SideEffectsSection from "./SideEffectsSection"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
     <About/>
     <Doctors/>  
     <Appointment/>
+    <SideEffectsSection/>
     <Contact/>
     </>
   )

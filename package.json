@@ -15,6 +15,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@splidejs/react-splide": "^0.7.12",
     "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
     "firebase": "^11.4.0",
@@ -24,7 +25,9 @@
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.3.0",
+    "react-slick": "^0.30.3",
     "react-toastify": "^11.0.5",
+    "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.6.13"
   },
   "devDependencies": {

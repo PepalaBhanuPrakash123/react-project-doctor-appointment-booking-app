@@ -43,7 +43,7 @@ const NavBar = () => {
                 {/* Logo */}
                 <a href="#" className='navbar-brand d-flex align-items-center text-decoration-none'>
                     <Stethoscope className='text-primary me-2' size={32} />
-                    <span className='h4 text-primary fw-bold'>New Life Healthcare</span>
+                    <span className='h4 text-primary fw-bold'>New Life Health Care</span>
                 </a>
 
                 {/* Mobile Menu Button */}
